@@ -31,10 +31,10 @@ Calculates 5000 scenarios per year
 
 | Phase | Condition | Formula | Purpose |
 | :---- | :-------: | :-----: | ------: |
-|**Accumulation**|$(a_{s} + t) \; \lt \; a_{r}$|$V_{t} = V_{t-1} \cdot (1+\frac{r}{100}) + D$|Accumulate wealth before retirement|
-|**Retirement**|$(a_{s} + t) \; \ge \; a_{r}$|$V_{t} = V_{t-1} \cdot (1+\frac{r}{100}) - W$|Use accumulated wealth to retire comfortably|
+|**Accumulation**|$(a_{s} + t) \lt a_{r}$|$V_{t} = V_{t-1} \cdot (1+\frac{r}{100}) + D$|Accumulate wealth before retirement|
+|**Retirement**|$(a_{s} + t) \ge a_{r}$|$V_{t} = V_{t-1} \cdot (1+\frac{r}{100}) - W$|Use accumulated wealth to retire comfortably|
 |**Market crash**|$(a_{s} + t) = a_{c}$|$V_{t} = V_{t} \cdot (1-\frac{C}{100})$|Simulate severe loss after a crash|
-|**Crash aftermath**|$a_{c} \; \le \; (a_{s} + t) \; \le \; (a_{c} + 3)$|$\sigma = \sigma \cdot 1.5$|Simulate extreme volatility of a recovering market (3-year period)|
+|**Crash aftermath**|$a_{c} \le (a_{s} + t) \le (a_{c} + 3)$|$\sigma = \sigma \cdot 1.5$|Simulate extreme volatility of a recovering market (3-year period)|
 
 ## Explanation
 The Monte Carlo method here utilizes a simple Gaussian Distribution to get randomized multiplier values.
